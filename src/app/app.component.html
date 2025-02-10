@@ -129,7 +129,9 @@ name="user name"/>
 <button (click)="toggle()">Toggle</button> <br/>
 <h1 *ngIf="display">Heading tag for toggle</h1>
 
-
+<ngb-alert [dismissible]="false">
+	<strong>Warning!</strong> Better check yourself, you're not looking too good.
+</ngb-alert>
 
 
 
