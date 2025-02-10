@@ -1,0 +1,158 @@
+hello sandeep {{title}}<br>
+ {{data}}<br>
+ {{getValue()}}<br>
+{{2+2}} <br>
+{{2*2/4}} <br>
+{{title=="blog"}} <br>
+
+<!-- {{title="hello"}}  we cant do this in angular-->
+ <!-- {{typeof title}}  we cant do this in angular-->
+
+ {{data1}} <br>
+ <!-- {{data1++}}  we cant do this in angular-->
+
+  <!-- {{new title}}  we cant use new keyword like this in angular-->
+
+<h5 class="{{title}}">this is h5 tag</h5>
+
+<app-user-list></app-user-list>
+<!-- <app-user-list></app-user-list>
+<app-user-list></app-user-list>
+<app-user-list></app-user-list>-->
+<app-user-list2></app-user-list2>
+<app-student-list></app-student-list>
+<app-country-list></app-country-list>
+<app-login></app-login>
+<app-register></app-register>
+
+<button (click)="getName('sandeep','kadu')">Click Me</button> <br/>
+
+<button (click)="getData('hello')">Call Function</button><br/><br/>
+
+<!-- <input type="text" #box (keyup)="getData(box.value)"  placeholder="event keyup"/><br/><br/>
+<input type="text" #box1 (keydown)="getData(box1.value)"  placeholder="event keydown"/><br/><br/>
+<input type="text" #box2 (blur)="getData(box2.value)"  placeholder="event blur"/><br/><br/>
+<input type="text" #box3 (input)="getData(box3.value)"  placeholder="event input"/><br/><br/> 
+
+<h6 (mouseover)="getData('mouse is over this h6 field')">this is h6 tag</h6>
+<h6 (mouseleave)="getData('mouse is leaved from this h6 field')">this is h6 tag</h6> -->
+
+<input 
+type="text" 
+#name 
+placeholder="Enter Name" 
+name="user name"/>
+
+<button (click)="getValue2(name.placeholder)">Click Me</button> <br/>
+<p>
+
+  Name is : {{displayVal}}
+
+</p>
+
+<button (click)="counter('add')">++</button> <br/><br/>
+<button (click)="counter('minus')">--</button> <br/>
+<p>Count : {{count}}</p>
+
+<h1 class="heading">This is Angular h1 tag</h1>
+
+<input type="text"  name="username1" value={{fullname}} disabled={{disable}}><br/><br/>
+<input type="text"  name="username2" [value]=fullname [disabled]=disable ><br/><br/>
+
+<h1 *ngIf="show=='yes'; then ifBlock else elseBlock"></h1>
+
+<ng-template #ifBlock>
+  <h1>IF CONDITION</h1>
+</ng-template>
+
+<ng-template #elseBlock>
+  <h1>ELSE CONDITION</h1>
+</ng-template>
+
+
+<ng-template [ngIf]="color==='red'">
+  <h1 style="color:red;">RED COLOR</h1>
+</ng-template>
+
+<ng-template [ngIf]="color==='green'">
+  <h1 style="color:green;">GREEN COLOR</h1>
+</ng-template>
+
+<div [ngSwitch]="color">
+
+  <h1 *ngSwitchCase="'red'"  style="color:red;">RED COLOR BY SWITCH  CASE</h1>
+  <h1 *ngSwitchCase="'green'"  style="color:green;">GREEN COLOR BY SWITCH  CASE</h1>
+  <h1 *ngSwitchCase="'blue'"  style="color:blue;">BLUE COLOR BY SWITCH  CASE</h1>
+  <h1 *ngSwitchCase="'orange'"  style="color:orange;">ORANGE COLOR BY SWITCH  CASE</h1>
+  <h1 *ngSwitchDefault="'green'">UNKNOWN COLOR BY SWITCH  CASE</h1>
+
+</div>
+
+<h3 *ngFor="let item of users">Name is : {{item}}</h3>
+
+<h3 *ngFor="let item of userDetails">{{item.name}} || {{item.email}} || {{item.phone}}</h3>
+
+<ul *ngFor="let user of userDetails">
+<li>Name  : {{user.name}} </li>
+<li>Email : {{user.email}} </li>
+<li>Phone : {{user.phone}} </li>
+<li>Social Accounts : {{user.socialAccounts}} </li>
+
+<li>Social Accounts Formatted :</li>
+
+
+    <ul *ngFor="let account of user.socialAccounts">
+      <li>{{account}} </li>
+    </ul>
+
+</ul>
+
+
+<h1 [style.color]="color" [style.backgroundColor]="bgColor">Styele Binding | Dynamic Style</h1>
+<button (click)="updateColor()">Update Color</button> <br/><br/>
+
+<app-header></app-header><br/><br/>
+
+<form #basicForm="ngForm" (ngSubmit)="getData3(basicForm.value)">
+  <input type="text" ngModel  name="user"  placeholder="Enter User Name"/><br/><br/>
+  <input type="text" ngModel  name="email"  placeholder="Enter User Email"/><br/><br/>
+  <input type="text" ngModel  name="password"  placeholder="Enter User Password"/><br/><br/>
+  <button>Register</button> <br/><br/>
+</form>
+
+<ul>
+    <li>{{userData.user}}</li>
+    <li>{{userData.email}}</li>
+    <li>{{userData.password}}</li>
+</ul>
+
+<button (click)="toggle()">Toggle</button> <br/>
+<h1 *ngIf="display">Heading tag for toggle</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
