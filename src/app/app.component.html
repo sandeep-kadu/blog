@@ -156,7 +156,15 @@ name="user name"/>
 
 <br/><br/>
 
+<input type="text"  #task   placeholder="Enter New Task"/><br/><br/>
+<button (click)="addTask(task.value)">Add Task</button><br/><br/>
 
+<ul *ngFor="let item of list">
+  <li>{{item.name}} <button (click)="removeTask(item.id)">Remove</button><br/>
+  </li>
+</ul>
+
+<br/><br/>
 
 
 
