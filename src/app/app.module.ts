@@ -19,6 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ChildComponent } from './child/child.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { Child2Component } from './child2/child2.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     CountryListComponent,
     HeaderComponent,
     ChildComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    Child2Component
   ],
   imports: [
     BrowserModule,

@@ -97,5 +97,12 @@ updateChild()
   this.data2=Math.floor(Math.random()*10);
 }
 
+data3="X";
+
+updateData(item:string)
+{
+  console.warn(item);
+  this.data3=item;
+}
 
 }
