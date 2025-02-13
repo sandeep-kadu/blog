@@ -90,7 +90,12 @@ removeTask(id:number)
   this.list=this.list.filter(item=>item.id!==id);
 }
 
+data2=10;
 
+updateChild()
+{
+  this.data2=Math.floor(Math.random()*10);
+}
 
 
 }
