@@ -169,11 +169,11 @@ name="user name"/>
 <app-child [item]="data2"></app-child>
 
 <button (click)="updateChild()">Update Child Component</button><br/><br/>
-
 <br/><br/>
-
-
-
+<ul *ngFor="let user of userDetails">
+  <app-user-details [item2]='user'></app-user-details>
+</ul>
+<br/><br/>
 
 
 

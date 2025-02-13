@@ -18,6 +18,7 @@ import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ChildComponent } from './child/child.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ChildComponent } from './child/child.component';
     StudentListComponent,
     CountryListComponent,
     HeaderComponent,
-    ChildComponent
+    ChildComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
