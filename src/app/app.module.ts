@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {UserAuthModule} from './user-auth/user-auth.module';
 import {FormsModule} from '@angular/forms';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,7 +33,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     AppRoutingModule,
     UserAuthModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatBadgeModule
+
   ],
   providers: [
     provideAnimationsAsync()
