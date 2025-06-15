@@ -20,6 +20,12 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { ChildComponent } from './child/child.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { Child2Component } from './child2/child2.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HighlightDirective } from './highlight.directive';
+import { HttpClientModule } from '@angular/common/http';
+import { PersonComponent } from './person/person.component'; // 👈 import this
 
 @NgModule({
   declarations: [
@@ -32,9 +38,14 @@ import { Child2Component } from './child2/child2.component';
     HeaderComponent,
     ChildComponent,
     UserDetailsComponent,
-    Child2Component
+    Child2Component,
+    HomeComponent,
+    AboutComponent,
+    PageNotFoundComponent,
+    
   ],
   imports: [
+    HighlightDirective,
     BrowserModule,
     AppRoutingModule,
     UserAuthModule,
@@ -42,7 +53,9 @@ import { Child2Component } from './child2/child2.component';
     NgbModule,
     MatSlideToggleModule,
     MatButtonModule,
-    MatBadgeModule
+    MatBadgeModule,
+    HttpClientModule ,
+    PersonComponent
 
   ],
   providers: [

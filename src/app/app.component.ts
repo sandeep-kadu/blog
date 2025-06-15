@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { retry } from 'rxjs';
+import { MessageService } from './message.service';
+import { TodoService, Todo } from './todo.service';
 
 @Component({
   selector: 'app-root',
@@ -104,5 +106,28 @@ updateData(item:string)
   console.warn(item);
   this.data3=item;
 }
+//pipes examples 
+  today: Date = new Date(); // This is the current date
+
+  message: string = '';
+  todos: Todo[] = [];
+
+  constructor(
+    @Inject(MessageService) private messageService: MessageService,
+    private todoService: TodoService
+  ) {}
+
+  ngOnInit() {
+    this.message = this.messageService.getMessage();
+
+     this.todoService.getTodos().subscribe(data => {
+      this.todos = data;
+    });
+  }
+
+
+
+
+
 
 }

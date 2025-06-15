@@ -178,11 +178,81 @@ name="user name"/>
 Data 3 Value is : {{data3}}<br/><br/>
 <app-child2 (updataDataEvent)="updateData($event)"></app-child2>
 
+<h1>PIPES EXAMPLE</h1>
 
+<h2>Today's Date</h2>
+<p>{{ today | date:'fullDate' }}</p>
 
+<h2>Uppercase Example</h2>
+<p>{{ 'angular' | uppercase }}</p>
 
+<h2>Lowercase Example</h2>
+<p>{{ 'ANGULAR' | lowercase }}</p>
 
+<h2>Currency Example</h2>
+<p>{{ 12345 | currency:'INR' }}</p>
 
+<h2>Number Example</h2>
+<p>{{ 3.14159 | number:'1.2-2' }}</p>
 
+<h2>Percent Example</h2>
+<p>{{ 0.25 | percent }}</p>
 
+<h2>Slice Example</h2>
+<p>{{ 'Angular12' | slice:0:7 }}</p>
+<p>{{ 'angular 12' | uppercase | slice:0:7 }}</p>
+
+<h1>Angular Routing Demo</h1>
+<nav>
+  <a routerLink="/">Home</a> |
+  <a routerLink="/about">About</a> |
+  <a routerLink="/ContactUs">Contact Us</a>
+
+</nav>
+
+<hr />
+
+<router-outlet></router-outlet>
+
+<h1>Angular custom directive Demo</h1>
+
+<h2 appHighlight="lightgreen">Hover me to see highlight!</h2>
+<p appHighlight="skyblue">This is a directive example in Angular</p>
+
+<h2>Angular Service Demo</h2>
+<p>{{ message }}</p>
+
+<h2>Todo List (from API)</h2>
+
+<!-- <ul>
+  <li *ngFor="let todo of todos">
+    <strong>{{ todo.id }}:</strong> {{ todo.title }}
+    <span [style.color]="todo.completed ? 'green' : 'red'">
+      [{{ todo.completed ? 'Done' : 'Pending' }}]
+    </span>
+  </li>
+</ul> -->
+
+<h2>Todo List</h2>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todo of todos">
+      <td>{{ todo.id }}</td>
+      <td>{{ todo.title }}</td>
+      <td [style.color]="todo.completed ? 'green' : 'red'">
+        {{ todo.completed ? '✅ Done' : '❌ Pending' }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<app-person></app-person>
 
