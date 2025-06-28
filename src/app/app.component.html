@@ -268,5 +268,18 @@ Data 3 Value is : {{data3}}<br/><br/>
   <a routerLink="/userlazy">User Lazy</a>
 </nav>
 
+<!-- conastant url example -->
+
+<h2>Simple View Switcher Inside Blog App</h2>
+
+<nav>
+  <button (click)="changePage('home')">Home</button>
+  <button (click)="changePage('profile')">Profile</button>
+  <button (click)="changePage('settings')">Settings</button>
+</nav>
+
+<app-home *ngIf="currentPage === 'home'"></app-home>
+<app-profile *ngIf="currentPage === 'profile'"></app-profile>
+<app-settings *ngIf="currentPage === 'settings'"></app-settings>
 
 <router-outlet></router-outlet>

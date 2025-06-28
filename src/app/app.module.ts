@@ -29,6 +29,8 @@ import { PersonComponent } from './person/person.component'; // 👈 import this
 import { AdminModule } from './admin/admin.module';
 import { UserModule } from './user/user.module';
 import { ProfileComponent } from './views/profile/profile.component';
+import { SettingsComponent } from './views/settings/settings.component';
+import { UserCardComponent } from './user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { ProfileComponent } from './views/profile/profile.component';
     AboutComponent,
     PageNotFoundComponent,
     ProfileComponent,
+    SettingsComponent,
+    UserCardComponent,
     
     
   ],

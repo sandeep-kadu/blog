@@ -126,7 +126,12 @@ updateData(item:string)
   }
 
 
+//constant url through app example
+currentPage = 'home';
 
+  changePage(page: string) {
+    this.currentPage = page;
+  }
 
 
 
