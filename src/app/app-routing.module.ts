@@ -13,6 +13,16 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'admin', component: DashboardComponent },
   { path: 'user', component: UserDashboardComponent },
+   {
+    path: 'adminlazy',
+    loadChildren: () =>
+      import('./adminlazy/adminlazy.module').then(m => m.AdminlazyModule)
+  },
+  {
+    path: 'userlazy',
+    loadChildren: () =>
+      import('./userlazy/userlazy.module').then(m => m.UserlazyModule)
+  },
   { path: '**', component: PageNotFoundComponent }
 
   // { path: '', redirectTo: 'admin', pathMatch: 'full' } // default path

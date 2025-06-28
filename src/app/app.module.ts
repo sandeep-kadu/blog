@@ -28,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PersonComponent } from './person/person.component'; // 👈 import this
 import { AdminModule } from './admin/admin.module';
 import { UserModule } from './user/user.module';
+import { ProfileComponent } from './views/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { UserModule } from './user/user.module';
     HomeComponent,
     AboutComponent,
     PageNotFoundComponent,
+    ProfileComponent,
     
     
   ],
