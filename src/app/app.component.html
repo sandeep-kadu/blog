@@ -282,4 +282,9 @@ Data 3 Value is : {{data3}}<br/><br/>
 <app-profile *ngIf="currentPage === 'profile'"></app-profile>
 <app-settings *ngIf="currentPage === 'settings'"></app-settings>
 
+<!-- dynmaic component loading example -->
+
+<button (click)="loadComponent()">Load User Card</button>
+<ng-template #container></ng-template>
+
 <router-outlet></router-outlet>

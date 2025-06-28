@@ -4,6 +4,8 @@ import { NgForm } from '@angular/forms';
 import { retry } from 'rxjs';
 import { MessageService } from './message.service';
 import { TodoService, Todo } from './todo.service';
+import {  ViewChild, ViewContainerRef } from '@angular/core';
+import { UserCardComponent } from './user-card/user-card.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +14,8 @@ import { TodoService, Todo } from './todo.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+
   title = 'blog';
   data = 'sandeep kadu data';
   data1=100;
@@ -133,6 +137,11 @@ currentPage = 'home';
     this.currentPage = page;
   }
 
+ //dynamic component loading example
+  @ViewChild('container', { read: ViewContainerRef }) container!: ViewContainerRef;
 
-
+  loadComponent() {
+    this.container.clear(); // optional, to remove previous components
+    this.container.createComponent(UserCardComponent); // dynamically load
+  }
 }
