@@ -26,6 +26,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HighlightDirective } from './highlight.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { PersonComponent } from './person/person.component'; // 👈 import this
+import { AdminModule } from './admin/admin.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { PersonComponent } from './person/person.component'; // 👈 import this
     AboutComponent,
     PageNotFoundComponent,
     
+    
   ],
   imports: [
     HighlightDirective,
@@ -55,7 +58,9 @@ import { PersonComponent } from './person/person.component'; // 👈 import this
     MatButtonModule,
     MatBadgeModule,
     HttpClientModule ,
-    PersonComponent
+    PersonComponent,
+    AdminModule,
+    UserModule
 
   ],
   providers: [

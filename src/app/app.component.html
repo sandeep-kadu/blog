@@ -212,7 +212,7 @@ Data 3 Value is : {{data3}}<br/><br/>
 
 <hr />
 
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
 
 <h1>Angular custom directive Demo</h1>
 
@@ -256,3 +256,9 @@ Data 3 Value is : {{data3}}<br/><br/>
 
 <app-person></app-person>
 
+<h1>Angular Group Routing Demo</h1>
+    <nav>
+      <a routerLink="/admin">Admin</a> |
+      <a routerLink="/user">User</a>
+    </nav>
+    <router-outlet></router-outlet>
